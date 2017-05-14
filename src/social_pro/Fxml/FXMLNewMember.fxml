@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MemberList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.NewMemberController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="82.0" minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="1024.0">
+         <children>
+            <Label fx:id="nom1" layoutX="48.0" layoutY="248.0" text="Nom">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="email1" layoutX="47.0" layoutY="332.0" text="Email">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="177.0" textFill="RED" />
+            <Label fx:id="poste1" layoutX="46.0" layoutY="407.0" text="Poste">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="departement1" layoutX="46.0" layoutY="441.0" text="Departement">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Text layoutX="140.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membre">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Separator layoutX="9.0" layoutY="42.0" prefHeight="5.0" prefWidth="338.0" />
+            <Label fx:id="cin1" layoutX="50.0" layoutY="206.0" text="Cin">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="tel1" layoutX="45.0" layoutY="370.0" text="Téléphone">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Separator layoutX="345.0" layoutY="61.0" orientation="VERTICAL" prefHeight="431.0" prefWidth="18.0" />
+            <TableView fx:id="tableMembers" layoutX="372.0" layoutY="42.0" onMouseClicked="#getUser" prefHeight="345.0" prefWidth="614.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="62.0" text="Id" />
+                  <TableColumn fx:id="cin" prefWidth="89.0" text="Cin" />
+                  <TableColumn fx:id="username" prefWidth="76.0" text="Nom" />
+                  <TableColumn fx:id="email" prefWidth="66.0" text="Prenom" />
+                  <TableColumn fx:id="etat" prefWidth="71.0" text="Etat" />
+                  <TableColumn fx:id="poste" minWidth="0.0" prefWidth="71.0" text="Poste" />
+                  <TableColumn fx:id="departement" prefWidth="94.0" text="Département" />
+                  <TableColumn fx:id="role" prefWidth="85.0" text="Role" />
+               </columns>
+            </TableView>
+            <Button fx:id="btn_delete" layoutX="678.0" layoutY="475.0" mnemonicParsing="false" onAction="#DeleteMember" prefHeight="34.0" prefWidth="308.0" styleClass="buttonError" stylesheets="@newCascadeStyleSheet.css" text="Supprimer membre" />
+           <Button fx:id="btn_confirmMember" layoutX="678.0" layoutY="424.0" mnemonicParsing="false" onAction="#ConfirmMember" prefHeight="34.0" prefWidth="308.0" styleClass="buttonLogin" stylesheets="@newCascadeStyleSheet.css" text="Confirmer membre" textFill="WHITE" />
+            <Separator layoutX="9.0" layoutY="183.0" prefHeight="5.0" prefWidth="338.0" />
+            <Label fx:id="prenom1" layoutX="47.0" layoutY="289.0" text="Prenom">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="role1" layoutX="49.0" layoutY="475.0" text="Rôle">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <ImageView fx:id="userPic" fitHeight="120.0" fitWidth="120.0" layoutX="118.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="76.0" prefWidth="1024.0" styleClass="whiteBackGround" stylesheets="@newCascadeStyleSheet.css">
+         <children>
+            <Button fx:id="btn_retour" layoutX="25.0" layoutY="18.0" mnemonicParsing="false" onAction="#retour" prefHeight="40.0" prefWidth="68.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="search" layoutX="730.0" layoutY="26.0" onKeyReleased="#rech" prefHeight="25.0" prefWidth="262.0" text="rechercher.." />
+         </children>
+      </Pane>
+     
+
+             </children>
+</AnchorPane>

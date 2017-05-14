@@ -1,0 +1,36 @@
+
+#AnchorPane{
+    -fx-background-image: url('../ressources/bg.jpg');
+    -fx-background-position: center center;
+	-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+   
+
+}
+.whiteBackGround {
+    
+    -fx-background-color: rgb(52,52,52) ; 
+}
+
+.btnAjoutT {
+   -fx-background-color: rgb(129,196,8);
+   cursor: pointer;
+   
+}
+
+.btnAjoutT:focused
+{
+    -fx-border-width: 2;
+    -fx-border-color : white;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0; 
+}
+.button:pressed, .button:default:hover:pressed
+{
+   
+    -fx-border-width: 2;
+    -fx-border-color : white;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}

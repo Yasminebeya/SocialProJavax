@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="601.0" stylesheets="@../css/bg.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.ConvocationEmpController">
+   <children>
+      <Pane fx:id="pane" layoutY="-12.0" prefHeight="103.0" prefWidth="601.0" styleClass="whiteBackGround">
+         <children>
+            <Button id="button" fx:id="btnRetour" layoutX="31.0" layoutY="35.0" mnemonicParsing="false" onAction="#retour" prefHeight="46.0" prefWidth="49.0" stylesheets="@../css/buttonCircle%20-%20Copie.css">
+               <graphic>
+                  <ImageView fx:id="imghome1" fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnlogout" layoutX="514.0" layoutY="32.0" mnemonicParsing="false" onAction="#logout" prefHeight="46.0" prefWidth="48.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <ImageView fitHeight="66.0" fitWidth="66.0" layoutX="442.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/convocation.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="43.0" layoutY="171.0" prefHeight="4.0" prefWidth="515.0" />
+      <Label layoutX="78.0" layoutY="195.0" text="Text" textFill="#2b4fbd">
+         <font>
+            <Font name="Monotype Corsiva" size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="43.0" layoutY="391.0" prefHeight="4.0" prefWidth="515.0" />
+      <Button fx:id="btnEnovyerCon" layoutX="271.0" layoutY="403.0" mnemonicParsing="false" onAction="#envoyer" prefHeight="33.0" prefWidth="123.0" text="Envoyer" textAlignment="CENTER" textFill="#00afbf" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <Blend mode="GREEN" />
+         </effect>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/Tache/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnAnnulerCon" layoutX="409.0" layoutY="403.0" mnemonicParsing="false" onAction="#annuler" prefHeight="33.0" prefWidth="133.0" text="Annuler" textAlignment="CENTER" textFill="#bd0000">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="27.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/Tache/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <JFXTextArea fx:id="txtConv" layoutX="155.0" layoutY="211.0" prefHeight="126.0" prefWidth="320.0" />
+      <Label layoutX="144.0" layoutY="110.0" text="Envoyer Une Convocation" textFill="#2b4fbd">
+         <font>
+            <Font name="Monotype Corsiva" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

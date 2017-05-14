@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="661.0" maxWidth="1024.0" opacity="0.88" prefHeight="628.0" prefWidth="1023.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.LouerController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <SplitPane layoutX="100.0" layoutY="88.0" prefHeight="572.0" prefWidth="922.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="920.0">
+               <children>
+                  <Label layoutX="-166.0" layoutY="442.0" text="Investisseur" textFill="#80b201">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="13.0" layoutX="-153.0" layoutY="492.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/checked_checkbox.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="20.0" fitWidth="13.0" layoutX="-153.0" layoutY="472.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/checked_checkbox.png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="DateD" layoutX="183.0" layoutY="129.0" />
+                  <DatePicker fx:id="DateF" layoutX="183.0" layoutY="174.0" />
+                  <Label layoutX="88.0" layoutY="133.0" text="Date debut :" />
+                  <Label layoutX="88.0" layoutY="178.0" text="Date fin    :" />
+                  <Button fx:id="BtnLouer" layoutX="183.0" layoutY="222.0" mnemonicParsing="false" onAction="#Louer2" prefHeight="27.0" prefWidth="174.0" styleClass="buttonLogin" text="Louer" />
+                  
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      
+          
+           
+           
+     
+      <Pane layoutX="-15.0" prefHeight="93.0" prefWidth="1024.0" styleClass="whiteBackGround">
+         <children>
+            <Button fx:id="btnretour" layoutX="14.0" layoutY="34.0" mnemonicParsing="false" onAction="#retour">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Button-Back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></Pane>
+      <AnchorPane fx:id="navList1" layoutX="7.0" layoutY="205.0" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+         <children>
+            <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0" />
+            <Text fx:id="AccederProfils" layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILS" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      
+    </children>
+</AnchorPane>

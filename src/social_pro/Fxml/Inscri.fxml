@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="659.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.InscriptionController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+    <children>
+      <ImageView fitHeight="662.0" fitWidth="1024.0" layoutX="1.0" layoutY="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@../ressources/contact-filtre.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="46.0" layoutY="161.0" prefHeight="2.0" prefWidth="968.0" />
+      <Button fx:id="imageUpload" layoutX="811.0" layoutY="173.0" mnemonicParsing="false" onAction="#processUpload" prefHeight="30.0" prefWidth="174.0" style="-fx-background-color: #86E2D5; -fx-background-radius: 20px;" text="Importer" textFill="WHITE" />
+      <Label fx:id="LImage" layoutX="735.0" layoutY="78.0" prefHeight="3.0" prefWidth="28.0" text="Label" />
+      <TextField fx:id="nom" layoutX="152.0" layoutY="173.0" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="prenom" layoutX="572.0" layoutY="173.0" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="cin" layoutX="153.0" layoutY="233.0" onKeyReleased="#onlyNumber" prefHeight="30.0" prefWidth="201.0" />
+      <ComboBox fx:id="sexe" layoutX="572.0" layoutY="235.0" prefHeight="27.0" prefWidth="201.0" />
+      <TextField fx:id="username" layoutX="153.0" layoutY="290.0" onKeyReleased="#usernameVerifAction" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="username_canonical" layoutX="572.0" layoutY="290.0" prefHeight="30.0" prefWidth="201.0" />
+      <PasswordField fx:id="password" layoutX="152.0" layoutY="416.0" onKeyReleased="#passwordVerifAction" prefHeight="30.0" prefWidth="200.0" />
+      <PasswordField fx:id="confirmation" layoutX="571.0" layoutY="416.0" prefHeight="30.0" prefWidth="203.0" promptText="confirmation" />
+      <ProgressBar fx:id="pwdProg" layoutX="152.0" layoutY="480.0" prefWidth="200.0" progress="0.0" />
+      <DatePicker fx:id="datenaissance" layoutX="154.0" layoutY="531.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="tel" layoutX="572.0" layoutY="528.0" onKeyReleased="#onlyNumber2" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="poste" layoutX="152.0" layoutY="586.0" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="departement" layoutX="572.0" layoutY="586.0" prefHeight="30.0" prefWidth="201.0" />
+      <ComboBox fx:id="role" layoutX="571.0" layoutY="475.0" prefHeight="27.0" prefWidth="201.0" />
+      <Text fx:id="nomAlert" layoutX="153.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.9999831020832" />
+      <Text fx:id="prenomAlert" layoutX="572.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.00001630187035" />
+      <Text fx:id="usernameAlert" layoutX="151.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="203.00000094249845" />
+      <Text fx:id="userCanonicalAler" layoutX="572.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.99996650218964" />
+      <Text fx:id="usernameConfim" layoutX="797.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="201.00000351667404" />
+      <TextField fx:id="email" layoutX="153.0" layoutY="351.0" onKeyReleased="#emailVerifAction" prefHeight="30.0" prefWidth="201.0" />
+      <TextField fx:id="email_canonical" layoutX="572.0" layoutY="351.0" prefHeight="30.0" prefWidth="201.0" />
+      <Text fx:id="emailAlert" layoutX="151.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="201.00000351667404" />
+      <Text fx:id="emailCanonicalAlert" layoutX="571.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="201.00000351667404" />
+      <Text fx:id="emailConfirm" layoutX="797.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="201.00000351667404" />
+      <Text fx:id="datealert" layoutX="153.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.99994990229607" />
+      <Text fx:id="Mot_passAlert" layoutX="152.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.99996235221624" />
+      <Text fx:id="ConfirmationAlert" layoutX="804.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.99994672834873" />
+      <Button fx:id="annuler" layoutX="817.0" layoutY="584.0" mnemonicParsing="false" onAction="#goAuth" prefHeight="30.0" prefWidth="174.0" style="-fx-background-radius: 20px;" styleClass="buttonError" stylesheets="@newCascadeStyleSheet.css" text="Annuler" textFill="WHITE" />
+      <Button fx:id="inscription" layoutX="817.0" layoutY="545.0" mnemonicParsing="false" onAction="#goInscri" prefHeight="30.0" prefWidth="174.0" style="-fx-background-radius: 20px;" styleClass="buttonLogin" stylesheets="@newCascadeStyleSheet.css" text="S'inscrire" textFill="WHITE" />
+      <Separator layoutX="46.0" layoutY="632.0" prefHeight="2.0" prefWidth="968.0" />
+      <Text layoutX="86.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" />
+      <Text layoutX="91.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cin" />
+      <Text layoutX="491.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom" />
+      <Text layoutX="505.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe" />
+      <Text layoutX="54.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="457.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation" />
+      <Text layoutX="81.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="426.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation Email" />
+      <Text layoutX="38.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" />
+      <Text layoutX="500.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rôle" />
+      <Text layoutX="17.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de naissance" />
+      <Text layoutX="464.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Téléphone" />
+      <Text layoutX="76.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poste" />
+      <Text layoutX="456.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departement" />
+      <Text fill="RED" layoutX="122.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="122.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="122.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="119.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="119.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="539.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="124.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="529.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="536.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="533.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="533.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <ImageView fx:id="image" fitHeight="115.0" fitWidth="101.0" layoutX="847.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Downloads/user.png" />
+         </image></ImageView>
+      <Text fill="#434343" layoutX="40.0" layoutY="136.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscrivez-vous à votre compte Social Pro">
+         <font>
+            <Font name="Helvetica Neue" size="24.0" />
+         </font>
+      </Text>
+    
+    </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.MapApiController1">
+    <children>
+        <GoogleMapView fx:id="mapView" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0"/>
+        <TextField fx:id="addressTextField" onAction="#addressTextFieldAction" prefHeight="27.0" prefWidth="274.0" promptText="Address" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" />
+          <Button fx:id="btn_marker" layoutX="427.0" layoutY="466.0" mnemonicParsing="false" onAction="#Marker" prefHeight="34.0" prefWidth="255.0" style="-fx-background-color: #86E2D5; -fx-background-radius: 20px;" stylesheets="@newCascadeStyleSheet.css" text="Marker " textFill="white" />
+    </children>
+</AnchorPane>

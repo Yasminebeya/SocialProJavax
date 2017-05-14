@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="social_pro.controllers.UpdateTacheController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="24.0" prefHeight="504.0" prefWidth="568.0">
+         <children>
+            <Text fx:id="ajouterTache" fill="#00a0bf" layoutX="180.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier une tache">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblTitreForum" fill="#00aec1" layoutX="89.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Début">
+               <font>
+                  <Font name="Segoe UI Italic" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblTitreForum1" fill="#00aec1" layoutX="90.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Fin">
+               <font>
+                  <Font name="Segoe UI Italic" size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="label" layoutX="182.0" layoutY="250.0" />
+            <ImageView fx:id="image2" fitHeight="59.0" fitWidth="132.0" layoutX="447.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/add.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="dPdatedebut" layoutX="201.0" layoutY="121.0" prefHeight="25.0" prefWidth="305.0" promptText="Date Début" />
+            <DatePicker fx:id="dPdatefin" layoutX="201.0" layoutY="164.0" prefHeight="25.0" prefWidth="305.0" promptText="Date fin" />
+            <Button fx:id="btnModifier" layoutX="231.0" layoutY="457.0" mnemonicParsing="false" onAction="#modif" prefHeight="33.0" prefWidth="123.0" text="Modifier" textAlignment="CENTER" textFill="#00afbf" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+               <effect>
+                  <Blend mode="GREEN" />
+               </effect>
+            </Button>
+            <TextArea fx:id="txtdescriptionDiscipline" layoutX="201.0" layoutY="212.0" prefHeight="171.0" prefWidth="305.0" promptText="Description...">
+               <stylesheets>
+                  <URL value="@../../../../../../Desktop/JAVAMOOC/src/com/esprit/mooc/css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+                  <URL value="@../css/Metro-UI.css" />
+               </stylesheets>
+            </TextArea>
+            <Button fx:id="btnHome" layoutX="17.0" layoutY="76.0" mnemonicParsing="false" onAction="#home" prefHeight="46.0" prefWidth="47.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fx:id="imghome" fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="16.0" fitWidth="30.0" layoutX="243.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/Tache/add.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="lblTitreForum11" fill="#00aec1" layoutX="90.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font name="Segoe UI Italic" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnAnnuler" layoutX="373.0" layoutY="457.0" mnemonicParsing="false" onAction="#annuler" prefHeight="33.0" prefWidth="133.0" text="Annuler" textAlignment="CENTER" textFill="#bd0000">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="16.0" fitWidth="25.0" layoutX="384.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ressources/Tache/cancel.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRetour" layoutX="17.0" layoutY="24.0" mnemonicParsing="false" onAction="#retour" prefHeight="46.0" prefWidth="49.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fx:id="imghome1" fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

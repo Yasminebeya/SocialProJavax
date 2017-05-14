@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="800.0" stylesheets="@../css/pane.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.BarChartController">
+   <children>
+      <BarChart fx:id="barChart" layoutX="31.0" layoutY="193.0" prefHeight="309.0" prefWidth="715.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Pane fx:id="pane" layoutX="-12.0" layoutY="-1.0" prefHeight="102.0" prefWidth="880.0" styleClass="whiteBackGround">
+         <children>
+            <Button fx:id="btnRetour" layoutX="39.0" layoutY="22.0" mnemonicParsing="false" onAction="#retour" prefHeight="46.0" prefWidth="48.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnlogout" layoutX="785.0" layoutY="19.0" mnemonicParsing="false" onAction="#logout" prefHeight="46.0" prefWidth="48.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <JFXButton fx:id="BtnCharger" buttonType="RAISED" layoutX="351.0" layoutY="139.0" onAction="#ChargerChart" prefHeight="35.0" prefWidth="137.0" style="-fx-background-color: #F2612D;" text="Charger" textFill="#fba51b">
+         <font>
+            <Font name="Arial Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

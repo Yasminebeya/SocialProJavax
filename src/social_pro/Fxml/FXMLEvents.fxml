@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.EventsController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="124.0" prefHeight="359.0" prefWidth="606.0">
+         <children>
+            <TableView fx:id="tableEvents" layoutX="14.0" layoutY="25.0" prefHeight="345.0" prefWidth="962.0" stylesheets="@newCascadeStyleSheet.css">
+               <columns>
+                  <TableColumn fx:id="lieu" prefWidth="70.0" text="Lieu" />
+                  <TableColumn fx:id="categorie" prefWidth="98.0" text="Catégorie" />
+                  <TableColumn fx:id="nom" prefWidth="109.0" text="Nom" />
+                  <TableColumn fx:id="description" prefWidth="186.0" text="Description" />
+                  <TableColumn fx:id="datedebut" prefWidth="96.0" text="Date debut" />
+                  <TableColumn fx:id="datefin" prefWidth="95.0" text="Date fin" />
+                  <TableColumn fx:id="nbrparticipants" prefWidth="136.0" text="Nombre participants" />
+                  <TableColumn fx:id="nbre_limite" prefWidth="171.0" text="Nombre des places restantes" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="-6.0" prefHeight="76.0" prefWidth="1024.0" styleClass="whiteBackGround" stylesheets="@newCascadeStyleSheet.css">
+         <children>
+      <!--      <TextField fx:id="search1" layoutX="29.0" layoutY="26.0" onKeyReleased="#rech" prefHeight="25.0" prefWidth="262.0" text="rechercher.." /> -->
+            <Button fx:id="btn_retour" layoutX="26.0" layoutY="18.0" mnemonicParsing="false" onAction="#goEventsList" prefHeight="40.0" prefWidth="68.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="114.0" layoutY="23.0" prefHeight="31.0" prefWidth="248.0" text="Les évènements à vénir" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search1" layoutX="731.0" layoutY="26.0" onAction="#rech" onKeyReleased="#rech" prefHeight="25.0" prefWidth="262.0" text="rechercher.." />
+         </children>
+      </Pane>
+      <Button fx:id="btn_participe" layoutX="626.0" layoutY="517.0" mnemonicParsing="false" onAction="#participe" prefHeight="34.0" prefWidth="360.0" styleClass="buttonLogin" stylesheets="@newCascadeStyleSheet.css" text="Participer à un évènement" textFill="WHITE" />
+      <Button fx:id="btn_mesEves" layoutX="628.0" layoutY="559.0" mnemonicParsing="false" onAction="#mesEves" prefHeight="34.0" prefWidth="170.0" styleClass="buttonMonProfil" stylesheets="@newCascadeStyleSheet.css" text="Mes évènements" textFill="WHITE" />
+      <Button fx:id="myEvents" layoutX="816.0" layoutY="559.0" mnemonicParsing="false" onAction="#myEvents" prefHeight="34.0" prefWidth="170.0" styleClass="buttonError" stylesheets="@newCascadeStyleSheet.css" text="Mon calendrier" textFill="WHITE" />
+      <Button fx:id="btnMap" layoutX="35.0" layoutY="517.0" mnemonicParsing="false" onAction="#VoirMap" prefHeight="25.0" prefWidth="141.0" styleClass="buttonErrorWithBorder" stylesheets="@newCascadeStyleSheet.css" text="Voir Sur Carte" />
+   <!--   <Button layoutX="38.0" layoutY="527.0" mnemonicParsing="false" onAction="" prefHeight="34.0" prefWidth="624.0" stylesheets="@../../../../../../Desktop/Kods_JAVAMOOC/JAVAMOOC/src/com/esprit/mooc/css/login.css" text="Statistiques" />
+-->  
+       </children>
+</AnchorPane>

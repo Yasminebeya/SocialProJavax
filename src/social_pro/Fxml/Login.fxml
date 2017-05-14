@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pswOublie" prefHeight="620.0" prefWidth="1024.0" styleClass="mainFxmlClass" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.AuthentificationController">
+   <children>
+      <Button fx:id="btnlogin" layoutX="599.0" layoutY="377.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="316.0" styleClass="buttonLogin" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="username" layoutX="600.0" layoutY="271.0" prefHeight="27.0" prefWidth="310.0" />
+      <Text layoutX="518.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+      <Text layoutX="498.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" />
+      <Text fill="RED" layoutX="582.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="RED" layoutX="582.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Line endX="60.0" fill="#8c8c8c" layoutX="443.0" layoutY="296.0" opacity="0.5" rotate="90.0" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Line endX="60.0" fill="#8c8c8c" layoutX="443.0" layoutY="395.0" opacity="0.5" rotate="90.0" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Text fill="#8c8c8c" layoutX="469.0" layoutY="348.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="ou">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="#434343" layoutX="274.0" layoutY="86.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Connectez-vous à votre compte Social Pro">
+         <font>
+            <Font name="Helvetica Neue" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="357.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pas encore inscrit ? " />
+      <Button fx:id="inscription" layoutX="499.0" layoutY="104.0" mnemonicParsing="false" onAction="#goInscri" styleClass="buttonCree" text="CRÉER MON COMPTE" textFill="#a6cc45">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="password" layoutX="599.0" layoutY="318.0" prefHeight="27.0" prefWidth="316.0" />
+      <Line endX="1024.0" fill="#8c8c8c" layoutX="-5.0" layoutY="188.0" opacity="0.2" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Line endX="1024.0" fill="#8c8c8c" layoutX="-5.0" layoutY="534.0" opacity="0.2" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Text layoutX="358.0" layoutY="553.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Le">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font></Text>
+      <Text fill="#a6cc45" layoutX="367.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Social Pro" wrappingWidth="62.3984375">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#353535" layoutX="422.0" layoutY="553.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="permet de rassembler les connaissainces collectives à ">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="358.0" layoutY="578.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="travers des discussions professionnelles et de profiter de l'experience de nos">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="358.0" layoutY="603.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text=" collaborateurs qui serons évalués selon leurs connaissances.">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="logoText" fitHeight="183.0" fitWidth="290.0" layoutX="97.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SoundOff" fitHeight="42.0" fitWidth="53.0" layoutX="924.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/volume-off.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_sound" layoutX="915.0" layoutY="23.0" mnemonicParsing="false" onAction="#soundOff" opacity="0.0" prefHeight="49.0" prefWidth="62.0" />
+      <ImageView fx:id="SoundOn" fitHeight="49.0" fitWidth="62.0" layoutX="921.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/sound-on.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_on" layoutX="919.0" layoutY="24.0" mnemonicParsing="false" onAction="#SoundOn" opacity="0.0" prefHeight="49.0" prefWidth="53.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="eventsList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.EventsListController">
+   <children>
+      <AnchorPane layoutX="351.0" layoutY="80.0" prefHeight="581.0" prefWidth="673.0">
+         <children>
+            <TableView fx:id="tableEvents" layoutX="6.0" layoutY="73.0" onMouseClicked="#getEvent" prefHeight="345.0" prefWidth="656.0">
+               <columns>
+                  <TableColumn fx:id="categorie" prefWidth="57.0" text="nom" />
+                  <TableColumn fx:id="nom" prefWidth="85.0" text="categorie" />
+                  <TableColumn fx:id="description" prefWidth="100.0" text="description" />
+                  <TableColumn fx:id="nbre_limite" prefWidth="93.0" text="nbre limite" />
+                  <TableColumn fx:id="datedebut" prefWidth="102.0" text="date debut" />
+                  <TableColumn fx:id="datefin" prefWidth="103.0" text="date fin" />
+                  <TableColumn fx:id="flag" prefWidth="44.0" text="Etat" />
+                  <TableColumn fx:id="lieu" prefWidth="75.0" text="Lieu" />
+               </columns>
+            </TableView>
+            
+            <Separator layoutX="12.0" layoutY="58.0" prefHeight="5.0" prefWidth="606.0" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="search" layoutX="477.0" layoutY="22.0" prefHeight="25.0" prefWidth="293.0" text="rechercher.." />
+ 
+      <Pane layoutY="-3.0" prefHeight="76.0" prefWidth="1024.0" styleClass="whiteBackGround" stylesheets="@newCascadeStyleSheet.css">
+         <children>
+          <TextField fx:id="search1" layoutX="732.0" layoutY="25.0" onKeyReleased="#rech" prefHeight="25.0" prefWidth="262.0" text="rechercher.." />
+            <Button fx:id="btn_retour1" layoutX="29.0" layoutY="18.0" mnemonicParsing="false" onAction="#retour" prefHeight="40.0" prefWidth="68.0" stylesheets="@../css/buttonCircle.css">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+        <!--      <Button fx:id="btn_retour1" layoutX="925.0" layoutY="14.0" mnemonicParsing="false" onAction="#retour" prefHeight="40.0" prefWidth="68.0" stylesheets="@../css/buttonCircle.css">
+             <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/arrowLeft.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>   -->
+         </children>
+      </Pane>
+      <AnchorPane layoutX="14.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="329.0">
+         <children>
+            <Label layoutY="69.0" text="Nom évènement">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="26.0" prefHeight="17.0" prefWidth="89.0" text="Categorie ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="235.0" text="Date début">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="285.0" text="Date fin">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="259.0" />
+            <Label layoutX="6.0" layoutY="126.0" text="Nombre limite">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="326.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom1" layoutX="115.0" layoutY="65.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextField fx:id="nbre_limite1" layoutX="115.0" layoutY="122.0" onKeyReleased="#onlyNumber" prefHeight="25.0" prefWidth="192.0" />
+            <DatePicker fx:id="datedebut1" layoutX="115.0" layoutY="230.0" prefHeight="25.0" prefWidth="192.0" />
+            <DatePicker fx:id="datefin1" layoutX="115.0" layoutY="281.0" prefHeight="25.0" prefWidth="192.0" />
+            <TextArea fx:id="description1" layoutX="112.0" layoutY="326.0" prefHeight="80.0" prefWidth="201.0" />
+            <Button fx:id="btn_add" layoutX="28.0" layoutY="435.0" mnemonicParsing="false" onAction="#add" prefHeight="16.0" prefWidth="293.0" styleClass="buttonLogin" stylesheets="@newCascadeStyleSheet.css" text="Ajouter" textFill="WHITE" />
+            <Text fx:id="nbreAlert" layoutX="115.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+            <Text fx:id="nomAlert" layoutX="115.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+            <ComboBox fx:id="categorie1" layoutX="116.0" layoutY="22.0" prefHeight="25.0" prefWidth="192.0" promptText="Choisir.." />
+            <Button fx:id="btn_modif" layoutX="28.0" layoutY="469.0" mnemonicParsing="false" onAction="#modif" prefHeight="25.0" prefWidth="293.0" styleClass="buttonLoginFacebook" stylesheets="@newCascadeStyleSheet.css" text="Modifier" textFill="WHITE" />
+            <Button fx:id="btn_delete" layoutX="28.0" layoutY="502.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="293.0" styleClass="buttonError" stylesheets="@newCascadeStyleSheet.css" text="Supprimer" />
+            <Separator layoutX="7.0" layoutY="419.0" prefHeight="5.0" prefWidth="338.0" />
+            <Text fx:id="dateAlert" layoutX="115.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+            <Text fx:id="dateAlert1" layoutX="115.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+            <Text fill="RED" layoutX="97.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="97.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="95.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="95.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="91.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <TextField fx:id="lieu1" layoutX="115.0" layoutY="174.0" onKeyReleased="#onlyNumber" prefHeight="25.0" prefWidth="192.0" />
+            <Text fx:id="lieuAlert" layoutX="115.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0" />
+            <Label layoutX="60.0" layoutY="178.0" text="Lieu">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text fill="RED" layoutX="95.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Separator layoutX="330.0" orientation="VERTICAL" prefHeight="534.0" prefWidth="15.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

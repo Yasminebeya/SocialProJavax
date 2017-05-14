@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="1108.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social_pro.controllers.ProfilController">
+   <children>
+      <ImageView fitHeight="604.0" fitWidth="1108.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/contact-filtre.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane id="AnchorPane" prefHeight="662.0" prefWidth="1108.0" style="-fx-background-image: C:\Users\Oumaima\Documents\NetBeansProjects\social_pro\src\social_pro\ressources\contact-filtre.jpg;" styleClass="page1">
+         <children>
+       <!--     <Button fx:id="inscription" layoutX="371.0" layoutY="133.0" mnemonicParsing="false" onAction="#goInscri" prefHeight="34.0" prefWidth="236.0" stylesheets="@../css/login.css" text="Modifier mes coordonnées" />
+            <Button fx:id="annuler" layoutX="371.0" layoutY="269.0" mnemonicParsing="false" onAction="#goAuth" prefHeight="34.0" prefWidth="236.0" stylesheets="@../css/login.css" text="Desactiver mon compte" />
+-->         
+                <Text fx:id="nom" fill="#2fc26a" layoutX="120.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font></Text>
+            <Text fx:id="prenom" fill="#2fc26a" layoutX="117.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Text fx:id="password" fill="#2fc26a" layoutX="116.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Text fx:id="datenaissance" fill="#2fc26a" layoutX="115.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date naissance">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Text fx:id="tel" fill="#2fc26a" layoutX="115.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Téléphone">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Text fx:id="departement" fill="#2fc26a" layoutX="118.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Département">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Text fx:id="poste" fill="#2fc26a" layoutX="118.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poste">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font></Text>
+            <Button fx:id="btnModif" layoutX="784.0" layoutY="456.0" mnemonicParsing="false" onAction="#modif" prefHeight="34.0" prefWidth="236.0" styleClass="buttonLogin" stylesheets="@newCascadeStyleSheet.css" text="Modifier mes coordonnées" textFill="WHITE" />
+            <Button fx:id="btnSupp" layoutX="784.0" layoutY="549.0" mnemonicParsing="false" onAction="#supp" prefHeight="34.0" prefWidth="236.0" styleClass="buttonError" stylesheets="@newCascadeStyleSheet.css" text="Supprimer mon compte" />
+            <Text fx:id="sexe" fill="#2fc26a" layoutX="118.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sexe">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="email" fill="#2fc26a" layoutX="118.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="username" fill="#2fc26a" layoutX="117.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="63.0" layoutY="629.0" prefHeight="3.0" prefWidth="966.0" />
+            <ImageView fx:id="userPic" fitHeight="120.0" fitWidth="120.0" layoutX="842.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane prefHeight="76.0" prefWidth="1108.0" styleClass="whiteBackGround" stylesheets="@newCascadeStyleSheet.css">
+               <children>
+                  <Button fx:id="btn_retour" layoutX="35.0" layoutY="18.0" mnemonicParsing="false" onAction="#goEventsList" prefHeight="40.0" prefWidth="68.0" stylesheets="@../css/buttonCircle.css">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../ressources/arrowLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Button fx:id="btnSupp1" layoutX="784.0" layoutY="504.0" mnemonicParsing="false" onAction="#desactiver" prefHeight="34.0" prefWidth="236.0" stylesheets="@../css/login.css" text="Désactiver mon compte" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
